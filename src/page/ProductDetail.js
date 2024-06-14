@@ -9,7 +9,7 @@ const ProductDetail = () => {
   const sale = <img src="../images/icon_11.gif" alt="sale" />;
   let { id } = useParams();
   const getProductDetail = async () => {
-    let url = `https://my-json-server.typicode.com/jeeseulah/ShoppingMall/${id}`;
+    let url = `https://my-json-server.typicode.com/jeeseulah/ShoppingMall/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     console.log(data);

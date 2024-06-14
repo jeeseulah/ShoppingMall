@@ -9,7 +9,7 @@ const ProductAll = () => {
   const getProducts = async () => {
     //쿼리값이 없으면 빈스트링을 searchQuery에 넣어준다
     let searchQuery = query.get("q") || "";
-    let url = `http://localhost:500/products?q=${searchQuery}`;
+    let url = `https://my-json-server.typicode.com/jeeseulah/ShoppingMall/products?q=${searchQuery}`;
     let response = await fetch(url);
     let data = await response.json();
     //console.log(data);

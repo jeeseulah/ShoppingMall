@@ -9,12 +9,13 @@ const ProductDetail = () => {
   const sale = <img src="../images/icon_11.gif" alt="sale" />;
   let { id } = useParams();
   const getProductDetail = async () => {
-    let url = `http://localhost:500/products/${id}`;
+    let url = `https://my-json-server.typicode.com/jeeseulah/ShoppingMall/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     console.log(data);
     setProduct(data);
   };
+  //  https://my-json-server.typicode.com/jeeseulah/ShoppingMall
   // API는 useEffect에 넣어라
   useEffect(() => {
     getProductDetail();
